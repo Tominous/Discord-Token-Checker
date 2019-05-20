@@ -67,26 +67,26 @@ public class GuiDTC extends JFrame {
         InputTokensButton.setFont(InputTokensButton.getFont());
         InputTokensButton.setText("Input Tokens");
         InputTokensButton.addActionListener(this::InputTokensActionPerformed);
-//        InputTokensButton.getModel().addChangeListener(e -> {
-//            ButtonModel model = (ButtonModel) e.getSource();
-//
-//            if (model.isRollover()) {
-//                InputTokensButton.setBackground(new Color(31, 90, 40).brighter());
-//            } else if (model.isPressed()) {
-//                InputTokensButton.setBackground(Color.BLACK);
-//            } else {
-//                InputTokensButton.setBackground(new Color(25, 90, 43));
-//            }
-//        });
-//        InputTokensButton.addMouseListener(new MouseAdapter() {
-//            public void mouseEntered(MouseEvent evt) {
-//                InputTokensButton.setBackground(Color.GREEN);
-//            }
-//
-//            public void mouseExited(MouseEvent evt) {
-//                InputTokensButton.setBackground(UIManager.getColor("control"));
-//            }
-//        });
+        InputTokensButton.getModel().addChangeListener(e -> {
+            ButtonModel model = (ButtonModel) e.getSource();
+
+            if (model.isRollover()) {
+                InputTokensButton.setBackground(new Color(31, 90, 40).brighter());
+            } else if (model.isPressed()) {
+                InputTokensButton.setBackground(Color.BLACK);
+            } else {
+                InputTokensButton.setBackground(new Color(25, 90, 43));
+            }
+        });
+        InputTokensButton.addMouseListener(new MouseAdapter() {
+            public void mouseEntered(MouseEvent evt) {
+                InputTokensButton.setBackground(Color.GREEN);
+            }
+
+            public void mouseExited(MouseEvent evt) {
+                InputTokensButton.setBackground(UIManager.getColor("control"));
+            }
+        });
 
         panel.setBorder(BorderFactory.createTitledBorder(null, "Output", TitledBorder.DEFAULT_JUSTIFICATION, TitledBorder.DEFAULT_POSITION, new Font("Arial Black", 0, 12), new Color(255, 255, 255))); // NOI18N
 
