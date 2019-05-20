@@ -32,7 +32,7 @@ public class Main {
         guiMain.addLine("# " + in);
         guiMain.addLine("Token: " + token);
         guiMain.addLine("");
-//        guiMain.addLine(response);
+        guiMain.addLine(response);
         JsonObject json = new JsonParser().parse(response).getAsJsonObject();
         String message = json.get("message") != null ? json.get("message").getAsString() : "";
         if (!message.equals("")) {
@@ -62,7 +62,7 @@ public class Main {
                 .userAgent(userAgent)
                 .authorization(token)
                 .body();
-//        guiMain.addLine(response);
+        guiMain.addLine(response);
         JsonArray jsona =  new JsonParser().parse(response).isJsonArray()?new JsonParser().parse(response).getAsJsonArray():null;
 
         if (jsona != null) {
